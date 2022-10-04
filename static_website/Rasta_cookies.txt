@@ -1,0 +1,41 @@
+import requests
+
+cookies = {
+    'iziwincok': 'i1gj88mmo2sd904arka4qv9uv3fhv5v1',
+    '_gid': 'GA1.2.419989543.1656297625',
+    '_tt_enable_cookie': '1',
+    '_ttp': '1bc5ca2e-b518-43ff-a3bd-b73bb8ec2f3e',
+    '__cf_bm': 'A28.shtwR8NidCB9T15GxRgVwSvA45e1q8WFoUTc8yA-1656297313-0-AS8fbFfuIGUqP0XN01ifE3oxzWvLQV/D89pShwtnbMezuUewkNpQy1n4LEzponPuwlKNsHGOK1d8wY+XxymClhik7Kv6EoJJ87DDef6nlq76Won9N/24d+Mkc6ZlEwQLbw==',
+    'myprefix_Zalogowany': '1',
+    'key-lang': 'ES',
+    '_ga_MF8E1V82S9': 'GS1.1.1656297625.1.1.1656297644.41',
+    '_ga': 'GA1.2.653460725.1656297625',
+    'amp_932404': '6e31rTTdS3TAchkRENWzwl...1g6hgg7rv.1g6hggqhg.0.2.2',
+}
+
+headers = {
+    'authority': 'key-drop.com',
+    'accept': '*/*',
+    'accept-language': 'es-AR,es;q=0.9',
+    # Already added when you pass json=
+    # 'content-type': 'application/json',
+    # Requests sorts cookies= alphabetically
+    # 'cookie': 'iziwincok=i1gj88mmo2sd904arka4qv9uv3fhv5v1; _gid=GA1.2.419989543.1656297625; _tt_enable_cookie=1; _ttp=1bc5ca2e-b518-43ff-a3bd-b73bb8ec2f3e; __cf_bm=A28.shtwR8NidCB9T15GxRgVwSvA45e1q8WFoUTc8yA-1656297313-0-AS8fbFfuIGUqP0XN01ifE3oxzWvLQV/D89pShwtnbMezuUewkNpQy1n4LEzponPuwlKNsHGOK1d8wY+XxymClhik7Kv6EoJJ87DDef6nlq76Won9N/24d+Mkc6ZlEwQLbw==; myprefix_Zalogowany=1; key-lang=ES; _ga_MF8E1V82S9=GS1.1.1656297625.1.1.1656297644.41; _ga=GA1.2.653460725.1656297625; amp_932404=6e31rTTdS3TAchkRENWzwl...1g6hgg7rv.1g6hggqhg.0.2.2',
+    'origin': 'https://key-drop.com',
+    'referer': 'https://key-drop.com/es/',
+    'sec-ch-ua': '".Not/A)Brand";v="99", "Google Chrome";v="103", "Chromium";v="103"',
+    'sec-ch-ua-mobile': '?0',
+    'sec-ch-ua-platform': '"Windows"',
+    'sec-fetch-dest': 'empty',
+    'sec-fetch-mode': 'cors',
+    'sec-fetch-site': 'same-origin',
+    'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36',
+    'x-requested-with': 'XMLHttpRequest',
+}
+
+json_data = {
+    'promoCode': 'ASD',
+    'recaptcha': None,
+}
+
+response = requests.post('https://key-drop.com/es/Api/activation_code', cookies=cookies, headers=headers, json=json_data)

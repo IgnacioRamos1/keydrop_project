@@ -1,0 +1,28 @@
+import requests
+
+cookies = {
+    'cf_clearance': '11P3.R5PW40R0Y7SuxGc6nJ8aYLn7puF_Zoj67Q_Xa4-1647028312-0-150',
+    'amp_932404': 'tistI0VbMlRGwtg5070rDn...1ftt7h9ne.1ftt8oqci.0.0.0',
+    'myprefix_Zalogowany': '1',
+    '_tt_enable_cookie': '1',
+    '_ttp': 'a8a70fae-91d6-4da7-9175-fbfcd3ee0d5e',
+    '_ga_MF8E1V82S9': 'GS1.1.1656297249.4.1.1656297249.60',
+    '_ga': 'GA1.2.1650014847.1655704226',
+    '_gid': 'GA1.2.1910215527.1656297249',
+    '__cf_bm': '7M3CO7ap5kG8g6XQmWb72gyEzln5ZZqoM0qtrW5sGYU-1656297251-0-AX9VoYvu3y5SMTNZdFxQIKvMFkCKkzgMvGVp7nFYaspbh/H9RYVgKLgYRPx3fhpJO0qMIHBO/eoiYugv4nG9mgKlAfOxZ2cLKPiDKUyIQpNCE9FOLpL6+ob8weGqwA0G1g==',
+}
+
+headers = {
+    'authority': 'cdn.key-drop.com',
+    'accept': 'image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8',
+    'accept-language': 'es-ES,es;q=0.9',
+    # Requests sorts cookies= alphabetically
+    # 'cookie': 'cf_clearance=11P3.R5PW40R0Y7SuxGc6nJ8aYLn7puF_Zoj67Q_Xa4-1647028312-0-150; amp_932404=tistI0VbMlRGwtg5070rDn...1ftt7h9ne.1ftt8oqci.0.0.0; myprefix_Zalogowany=1; _tt_enable_cookie=1; _ttp=a8a70fae-91d6-4da7-9175-fbfcd3ee0d5e; _ga_MF8E1V82S9=GS1.1.1656297249.4.1.1656297249.60; _ga=GA1.2.1650014847.1655704226; _gid=GA1.2.1910215527.1656297249; __cf_bm=7M3CO7ap5kG8g6XQmWb72gyEzln5ZZqoM0qtrW5sGYU-1656297251-0-AX9VoYvu3y5SMTNZdFxQIKvMFkCKkzgMvGVp7nFYaspbh/H9RYVgKLgYRPx3fhpJO0qMIHBO/eoiYugv4nG9mgKlAfOxZ2cLKPiDKUyIQpNCE9FOLpL6+ob8weGqwA0G1g==',
+    'sec-fetch-dest': 'image',
+    'sec-fetch-mode': 'no-cors',
+    'sec-fetch-site': 'same-site',
+    'sec-gpc': '1',
+    'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.53 Safari/537.36',
+}
+
+response = requests.get('https://cdn.key-drop.com//csgo_icons/45/45f8c6639959173d4c9afb114fb4ff15.png', cookies=cookies, headers=headers)

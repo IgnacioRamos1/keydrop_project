@@ -1,0 +1,33 @@
+import requests
+
+cookies = {
+    '__cf_bm': 'AfkmsCzkCElpLKMTvoUu76o8vQom_ENtN5t3iEi8cfc-1656297375-0-AWNKnThyGzCRXkle8fQuPD2YWIWTWS0BXaKFQTjkubs6/fgYrb4BCTxv9py81eRZ+Ia8NaBlUv4QqbFS9DB+Pkz+TroQw5UvF3jGZQ7iYWehdts2KGsyQdE/PMVb0CV5Ng==',
+    'iziwincok': '6uev7646puaa5k6g7n6st298vtdbdfit',
+    'myprefix_Zalogowany': '1',
+    'key-lang': 'ES',
+}
+
+headers = {
+    'authority': 'key-drop.com',
+    'accept': '*/*',
+    'accept-language': 'es-ES,es;q=0.9',
+    # Already added when you pass json=
+    # 'content-type': 'application/json',
+    # Requests sorts cookies= alphabetically
+    # 'cookie': '__cf_bm=AfkmsCzkCElpLKMTvoUu76o8vQom_ENtN5t3iEi8cfc-1656297375-0-AWNKnThyGzCRXkle8fQuPD2YWIWTWS0BXaKFQTjkubs6/fgYrb4BCTxv9py81eRZ+Ia8NaBlUv4QqbFS9DB+Pkz+TroQw5UvF3jGZQ7iYWehdts2KGsyQdE/PMVb0CV5Ng==; iziwincok=6uev7646puaa5k6g7n6st298vtdbdfit; myprefix_Zalogowany=1; key-lang=ES',
+    'origin': 'https://key-drop.com',
+    'referer': 'https://key-drop.com/es/',
+    'sec-fetch-dest': 'empty',
+    'sec-fetch-mode': 'cors',
+    'sec-fetch-site': 'same-origin',
+    'sec-gpc': '1',
+    'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.53 Safari/537.36',
+    'x-requested-with': 'XMLHttpRequest',
+}
+
+json_data = {
+    'promoCode': 'asd',
+    'recaptcha': None,
+}
+
+response = requests.post('https://key-drop.com/es/Api/activation_code', cookies=cookies, headers=headers, json=json_data)

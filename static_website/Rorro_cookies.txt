@@ -1,0 +1,40 @@
+import requests
+
+cookies = {
+    '_fbp': 'fb.1.1625673200397.362647983',
+    '_tt_enable_cookie': '1',
+    '_ttp': '433dcd79-af4c-4acf-a03e-6efbb61c3e48',
+    '_gid': 'GA1.2.41407049.1656297317',
+    '__cf_bm': 'azg0VR_Dv4KUxM1KlNACQkAymPseISW5wVIxghrk6vs-1656297321-0-AZrmzwIPHvXOBvdpFQPP7tkmHK77zvpLcImbwIQkXoCW1Pd00glY3ZpqebFh5tnLsvQqZG8c1IKy847KQ+M6XCe+r5YU46+iiEbTTjcjCvMfUcGDDGzgyMIzI7dWhoxBag==',
+    'iziwincok': '5pvrtp4md8cnbvofsovi8fmmjdibvsgr',
+    'myprefix_Zalogowany': '1',
+    'key-lang': 'ES',
+    '_gat_UA-119884135-1': '1',
+    '_ga_MF8E1V82S9': 'GS1.1.1656297316.57.1.1656297647.35',
+    '_ga': 'GA1.2.372509274.1625673023',
+}
+
+headers = {
+    'authority': 'key-drop.com',
+    'accept': '*/*',
+    'accept-language': 'en-US,en;q=0.9,es-US;q=0.8,es;q=0.7',
+    # Already added when you pass json=
+    # 'content-type': 'application/json',
+    # Requests sorts cookies= alphabetically
+    # 'cookie': '_fbp=fb.1.1625673200397.362647983; _tt_enable_cookie=1; _ttp=433dcd79-af4c-4acf-a03e-6efbb61c3e48; _gid=GA1.2.41407049.1656297317; __cf_bm=azg0VR_Dv4KUxM1KlNACQkAymPseISW5wVIxghrk6vs-1656297321-0-AZrmzwIPHvXOBvdpFQPP7tkmHK77zvpLcImbwIQkXoCW1Pd00glY3ZpqebFh5tnLsvQqZG8c1IKy847KQ+M6XCe+r5YU46+iiEbTTjcjCvMfUcGDDGzgyMIzI7dWhoxBag==; iziwincok=5pvrtp4md8cnbvofsovi8fmmjdibvsgr; myprefix_Zalogowany=1; key-lang=ES; _gat_UA-119884135-1=1; _ga_MF8E1V82S9=GS1.1.1656297316.57.1.1656297647.35; _ga=GA1.2.372509274.1625673023',
+    'origin': 'https://key-drop.com',
+    'referer': 'https://key-drop.com/es/panel/profil',
+    'sec-fetch-dest': 'empty',
+    'sec-fetch-mode': 'cors',
+    'sec-fetch-site': 'same-origin',
+    'sec-gpc': '1',
+    'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.53 Safari/537.36',
+    'x-requested-with': 'XMLHttpRequest',
+}
+
+json_data = {
+    'promoCode': 'dsa',
+    'recaptcha': None,
+}
+
+response = requests.post('https://key-drop.com/es/Api/activation_code', cookies=cookies, headers=headers, json=json_data)
